@@ -1,0 +1,28 @@
+#include <iostream>
+
+class Fibonacci {
+public:
+    int getData(int n) {
+        return fibo(n);
+    }
+
+private:
+    int fibo(int n) {
+        if (n <= 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return fibo(n-1) + fibo(n-2);
+        }
+    }
+};
+
+int main() {
+    Fibonacci f;
+    int n;
+    std::cout << "Enter a positive integer: ";
+    std::cin >> n;
+    std::cout << "The Fibonacci number at position " << n << " is: " << f.getData(n) << std::endl;
+    return 0;
+}
