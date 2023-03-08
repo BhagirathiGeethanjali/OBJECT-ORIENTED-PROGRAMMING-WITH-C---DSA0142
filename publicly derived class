@@ -1,0 +1,36 @@
+using namespace std;
+#include<iostream>
+class state
+{
+	public:
+		string dname;
+		float distance;
+		long int population;
+	
+};
+
+class district:public state
+{
+	public:
+		void dinput()
+		{
+			cout<<" Enter dname, distance and population";
+			cin>>dname>>distance>>population;
+		}
+		
+		void doutput()
+		{
+			cout<<"\n The district is"<<dname;
+			cout<<"\n The distance of district from state is"<<distance;
+			cout<<"\n The population of district is "<<population;
+		}
+	
+};
+
+int main()
+{
+	district d1;
+	d1.dinput();
+	d1.doutput();
+	return 0;
+}
